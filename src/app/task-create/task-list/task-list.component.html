@@ -1,0 +1,44 @@
+
+  <ul>
+    <li *ngFor="let item of items">
+  
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Candidate</th>
+              <th>Client Name</th>
+              <th>Rate Type</th>
+              <th>Contractor End-Date</th>
+              <th>Comments</th>
+              <th>Payment From</th>
+              <th>Payment Till Date</th>
+              <th>Payment Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ item.title }}</td>
+              <td>{{ item.client }}</td>
+              <td>{{ item.type }}</td>
+              <td>{{ item.endDate }}</td>
+              <td>{{ item.description }}</td>
+              <td>{{ item.fromDate }}</td>
+              <td>{{ item.tillDate }}</td>
+              <td>{{ item.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-container">
+          <button class="complete-btn" (click)="completeItem(item)">
+            Complete
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+            </svg>
+          </button>
+        </div>
+        
+   
+     
+    </li>
+  </ul>
+

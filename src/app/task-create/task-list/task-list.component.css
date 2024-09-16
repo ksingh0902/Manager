@@ -1,0 +1,95 @@
+
+ul{
+  list-style: none;
+}
+
+
+/* Task List Table styling */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures there are no gaps between cells */
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: left;
+  table-layout: auto; /* Allows columns to adjust based on content */
+}
+
+/* Table header styling */
+.styled-table thead tr {
+  background-color: #b98383;
+  color: #fffbfb;
+  text-align: center; /* Centers the text in the header */
+  font-weight: bold;
+}
+
+/* Table header cells */
+.styled-table th {
+  padding: 12px;
+  border: 1px solid #ccc; /* Light border for headers */
+}
+
+/* Table cell styling */
+.styled-table th, 
+.styled-table td {
+  padding: 12px;
+  border: 1px solid #ddd; /* Light border for cells */
+  color: #f3f1f1;
+  word-wrap: break-word; /* Ensures long text wraps within cells */
+  text-align: left; /* Aligns text to the left inside cells */
+  vertical-align: top; /* Aligns text to the top of cells */
+}
+
+/* Styling for even rows */
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for table rows */
+.styled-table tbody tr:hover {
+  background-color: #000000;
+}
+
+/* Responsive adjustments for small screens */
+@media screen and (max-width: 768px) {
+  .styled-table th, 
+  .styled-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Adding horizontal scroll for small screens */
+  .styled-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Complete button container styling */
+.button-container {
+  margin: 10px;
+  margin-left: 35rem;
+  text-align: right; /* Align button to the right */
+}
+
+/* Complete button styling */
+.complete-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.complete-btn svg {
+  margin-left: 8px;
+  fill: white;
+}
+
+.complete-btn:hover {
+  background-color: #218838;
+}

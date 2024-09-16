@@ -1,0 +1,34 @@
+<div class="container">
+      <div class="form-group">
+        <label for="fromDate"> Payment From</label>
+        <input 
+          type="date" 
+          id="fromDate" 
+          required
+          class="form-control"
+          (change)="onFromChange($event)">
+          <!-- implementing the event binding method to send data to parent components -->
+      </div>
+
+      <div class="form-group">
+        <label for="tillDate">Till Date</label>
+        <input 
+          type="date" 
+          id="tillDate" 
+          required
+          class="form-control"
+          (change)="onTillChange($event)">
+      </div>
+  
+      <div class="form-group">
+        <label for="endDate">Contractor End Date</label>
+        <input 
+          type="date" 
+          id="endDate" 
+          required
+          class="form-control"
+          (change)="onEndDate($event)">
+      </div>
+  
+  </div>
+  

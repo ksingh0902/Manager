@@ -1,0 +1,57 @@
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #f9f9f9; /* Light gray background for the form */
+    border-radius: 8px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    display: inline-block;
+    background-color: #d6e4f1;
+    width: 48%;
+    margin-right: 4%; /* Space between "From" and "Till Date" fields */
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  .form-group:last-child {
+    margin-right: 0; /* Remove the right margin from the last form group */
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #6599cd; /* A darker shade of blue for text */
+  }
+  
+  /* Input and textarea styling */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #485a6b;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .form-group {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  

@@ -1,0 +1,96 @@
+/* Container styling */
+
+
+/* .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh; 
+  width: 100%;
+} */
+
+
+.task-create-container {
+  background-color: #d6e4f1; /* Light gray background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width within its parent container */
+}
+
+/* Heading style */
+.task-create-container h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 550;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #6599cd; /* Dark gray */
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #6599cd; /* Darker gray for text */
+}
+
+/* Input and textarea styling */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ced4da; /* Light border */
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #485a6b;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus effect */
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom:2px;
+  margin-left: 27rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:disabled {
+  background-color: #cfd2d6;
+  border-color: #cfd2d6;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e3342f;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+.type{
+  margin-left:15px;
+}

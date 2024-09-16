@@ -1,0 +1,81 @@
+
+<div class="task-create-container">
+    <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
+      <h3>Create a New Task</h3>
+ 
+      <div class="form-group">
+        <label for="title">Full Name</label>
+        <input 
+          type="text" 
+          id="title" 
+          class="form-control" 
+          required 
+          [(ngModel)]="task.title" 
+          name="title"
+          #title="ngModel">
+          <div *ngIf="title.invalid && title.touched" class="error-message">
+          </div>
+       
+      </div>
+  
+   
+        <!-- Example split danger button -->
+        <div class="btn-group pb-3 pt-2">
+          <button type="button" class="btn btn-danger">{{clientName}}</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" (click)="OnSelectedClient('TD Bank')" href="#">TD Bank</a></li>
+            <li><a class="dropdown-item" (click)="OnSelectedClient('BNS (A-G)')" href="#">BNS (A-G)</a></li>
+            <li><a class="dropdown-item" (click)="OnSelectedClient('BNS (H-Z)')" href="#">BNS (H-Z)</a></li>
+            <li><a class="dropdown-item" (click)="OnSelectedClient('LBC Tech')" href="#">LBC Tech</a></li>
+          </ul>
+        </div>
+
+             <!-- Example split danger button -->
+             <div class="btn-group type pb-3 pt-2">
+              <button type="button" class="btn btn-warning">{{type}}</button>
+              <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" (click)="OnSelectedType('Inc.')" href="#">Inc.</a></li>
+                <li><a class="dropdown-item" (click)="OnSelectedType('T4')" href="#">T4</a></li>
+              </ul>
+            </div>
+             
+            <div class="btn-group type pb-3 pt-2">
+              <button type="button" class="btn btn-success">{{status}}</button>
+              <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" (click)="checkStatus('Paid')" href="#">Paid</a></li>
+                <li><a class="dropdown-item" (click)="checkStatus('Confirmed')" href="#">Confirmed</a></li>
+                <li><a class="dropdown-item" (click)="checkStatus('Pending')" href="#">Pending</a></li>
+              </ul>
+            </div>
+      <div class="form-group">
+        <label for="description">Comments</label>
+        <textarea 
+          id="description" 
+          class="form-control" 
+          [(ngModel)]="task.description"
+          name="description"
+          rows="3">
+      </textarea> 
+      </div>
+
+  <app-date 
+  (fromDateChanged)="onFromDateReceived($event)" 
+  (tillDateChanged)="onTillDateReceived($event)"
+  (endDate)="onEndDateRecieved($event)">
+</app-date>
+
+  <button type="submit" class="btn btn-primary" [disabled]="taskForm.invalid">Add Task</button>
+    </form>
+  </div>
+
+  
+

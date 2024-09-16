@@ -1,0 +1,26 @@
+.container{
+display: flex;
+justify-content: center;
+
+}
+
+
+.todo-title {
+    color: #e7eff5; /* White text to contrast against the black background */
+    font-weight: bold;
+    font-size:2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    margin-left: 12px;
+  }
+  
+  .todo-title:hover {
+    color: #9098a0; /* Light grey text on hover */
+    text-shadow: 2px 2px 4px rgba(243, 239, 239, 0.741); /* Subtle shadow for a professional look */
+    cursor: pointer;
+  }
+
+  .container img{
+    cursor: pointer;
+    background-color: #b7c5d5; /* Light grey text on hover */
+  }
+
