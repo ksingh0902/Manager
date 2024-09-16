@@ -9,10 +9,10 @@
   box-sizing: border-box;}
   /* Left section (Task Create Form) */
 .left-section {
-  background-color: #d6e4f1; /* Light gray background */
+  background-color: #a0bfdb; /* Light gray background */
   padding: 2px;
   height: auto;
- 
+ margin-top: 8px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 48%; /* Adjust to take up 50% of the screen */
