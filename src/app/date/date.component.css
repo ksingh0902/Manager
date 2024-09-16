@@ -6,7 +6,8 @@
     background-color: #f9f9f9; /* Light gray background for the form */
     border-radius: 8px;
   }
-  
+
+
   /* Form group styling */
   .form-group {
     display: inline-block;
@@ -27,6 +28,13 @@
     margin-bottom: 8px;
     color: #6599cd; /* A darker shade of blue for text */
   }
+
+  .last label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #6599cd;
+  }
   
   /* Input and textarea styling */
   .form-control {
@@ -39,7 +47,7 @@
     color: #485a6b;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   /* Input focus effect */
   .form-control:focus {
     border-color: #80bdff;
@@ -47,6 +55,20 @@
     box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
   }
   
+  .container-two{
+    max-width: 225px;
+    margin-top: 7px;
+    padding: 5px;
+    background-color: #f9f9f9; /* Light gray background for the form */
+    border-radius: 8px;
+  }
+  .last{
+    display: inline-block;
+    background-color: #d6e4f1;
+    width: 215px;;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
   /* Responsive styling */
   @media (max-width: 600px) {
     .form-group {

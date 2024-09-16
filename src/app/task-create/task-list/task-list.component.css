@@ -3,7 +3,20 @@ ul{
   list-style: none;
 }
 
+h3{
+  font-weight: bold;
+    font-size:25px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-align: center;
+    color: white;
+    margin-left: 15rem;
+}
 
+h3:hover{
+  color: #5683af; /* Light grey text on hover */
+    text-shadow: 2px 2px 4px rgba(243, 239, 239, 0.741); /* Subtle shadow for a professional look */
+    cursor: pointer;
+}
 /* Task List Table styling */
 .styled-table {
   width: 100%;
@@ -16,7 +29,7 @@ ul{
 
 /* Table header styling */
 .styled-table thead tr {
-  background-color: #b98383;
+  background-color: #72b6d6cd;
   color: #fffbfb;
   text-align: center; /* Centers the text in the header */
   font-weight: bold;

@@ -22,7 +22,7 @@ export class AppComponent {
   tasks: { title: string; description: string; fromDate: string, tillDate: string, client:string, type:string, endDate:string, status:string  }[] = [];
 
   onAddTask(dataOfList: { title: string; description: string; fromDate: string, tillDate: string, client:string, type:string, endDate:string, status:string}) {
-    this.tasks.push(dataOfList); // after recieveing data of lists from child and now Add the new tasks to the list and will send to another child
+    this.tasks.unshift(dataOfList); // after recieveing data of lists from child and now Add the new tasks to the list and will send to another child
   }
   
   
