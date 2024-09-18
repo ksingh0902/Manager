@@ -3,6 +3,7 @@ import { TaskListComponent } from "./task-list/task-list.component";
 import { FormsModule, NgForm } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { DateComponent } from '../date/date.component';
+// import { FirestoreService } from '../services/firestore.service';
 
 
 @Component({
@@ -12,8 +13,8 @@ import { DateComponent } from '../date/date.component';
   templateUrl: './task-create.component.html',
   styleUrl: './task-create.component.css'
 })
-export class TaskCreateComponent implements OnInit {
-@Output() add = new EventEmitter<{ title: string,  description: string, fromDate: string, tillDate: string, client:string, type:string, endDate:string, status:string}>()
+export class TaskCreateComponent {
+@Output() add = new EventEmitter<{ title: string, id:string, description: string, fromDate: string, tillDate: string, client:string, type:string, endDate:string, status:string}>()
 
 clientName:string='Select Client'
 type:string='Rate Type'
@@ -30,13 +31,19 @@ tillDate:string='dd/mm/yy';
   type:'',
   endDate:'',
   status:'',
+  id:'',
 
 } 
 tasksList: any[] = []; 
 
-ngOnInit(){
-this.getFromLocalStorage()
-}
+// constructor(private firestoreService: FirestoreService) {}  // Inject FirestoreService
+
+// ngOnInit() {
+//   // Optionally, get tasks from Firestore on init
+//   this.firestoreService.getTasks().subscribe(tasks => {
+//     console.log('Tasks from Firestore:', tasks);
+//   });
+// }
    OnSelectedClient(client:string){
          this.task.client =  client;
           this.clientName=client;               
@@ -66,24 +73,10 @@ this.getFromLocalStorage()
       onSubmit(form:NgForm){
        const formValues=form.value
         formValues.client = this.task.client
-
-        this.tasksList.push(this.task);
-        this.add.emit(this.task);
-        this.saveToLocalStrorage()
-
-        this.resetForm();
-      }
-      saveToLocalStrorage(){
-       let stringJSON= JSON.stringify(this.tasksList);
-        localStorage.setItem('todoList', stringJSON)
-      }
-
-
-      getFromLocalStorage(){
-        let itemJSONstring=localStorage.getItem('todoList')
-        if(itemJSONstring !=null){
-          this.tasksList=JSON.parse(itemJSONstring)
-        }
+           this.tasksList.push(this.task);
+           this.add.emit(this.task);
+           this.resetForm();
+         
       }
 
         resetForm(){
@@ -95,7 +88,8 @@ this.getFromLocalStorage()
             client:'',
             type:'',
             endDate:'',
-            status:''
+            status:'',
+            id:''
           };
 this.clientName='Select Client'
 this.type='Rate Type'

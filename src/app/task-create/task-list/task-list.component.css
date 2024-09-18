@@ -46,11 +46,11 @@ h3:hover{
 /* Table cell styling */
 .styled-table th, 
 .styled-table td {
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ddd; /* Light border for cells */
   color: #f3f1f1;
   word-wrap: break-word; /* Ensures long text wraps within cells */
-  text-align: left; /* Aligns text to the left inside cells */
+  text-align: center; /* Aligns text to the left inside cells */
   vertical-align: top; /* Aligns text to the top of cells */
 }
 

@@ -1,7 +1,7 @@
-<h3>List of Consultant</h3>
+<h3>List of Consultants</h3>
   <ul>
  
-    <li *ngFor="let item of items">
+    <li *ngFor="let item of list">
   
         <table class="styled-table">
           <thead>
@@ -18,13 +18,13 @@
           </thead>
           <tbody>
             <tr>
-              <td>{{ item.title }}</td>
+              <td>{{ item.title}}</td>
               <td>{{ item.client }}</td>
               <td>{{ item.type }}</td>
-              <td>{{ item.endDate }}</td>
+              <td>{{ item.endDate | date }}</td>
               <td>{{ item.description }}</td>
-              <td>{{ item.fromDate }}</td>
-              <td>{{ item.tillDate }}</td>
+              <td>{{ item.fromDate | date }}</td>
+              <td>{{ item.tillDate | date }}</td>
               <td>{{ item.status }}</td>
             </tr>
           </tbody>
