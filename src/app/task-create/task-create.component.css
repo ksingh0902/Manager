@@ -2,11 +2,11 @@
 /* Container styling */
 
 .task-create-container {
-  background-color: #c6e0f9; /* Light gray background */
+  background-color: #0c0c0c21; /* Light gray background */
   padding: 5px;
   margin-top: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 8px 5px rgba(0, 0, 0, 0.945);
   position: relative;
   width: 100%; /* Full width within its parent container */
 }
@@ -18,7 +18,7 @@
   margin-bottom: 10px;
   margin-top: 5px;
   text-align: center;
-  color: #6599cd; /* Dark gray */
+  color: #bfc6cc; /* Dark gray */
 }
 /* Form group styling */
 .form-group {
@@ -28,7 +28,7 @@
 .form-group label {
   display:flex;
   font-weight: 500;
-  color: #6599cd; /* Darker gray for text */
+  color: #9fb1c4; /* Darker gray for text */
 }
 /* Input and textarea styling */
 .form-control {
@@ -97,7 +97,7 @@
 }
 
 .type{
-  margin-left:30px;
+  margin-left:12px;
 }
 .client{
   margin-left:24px;

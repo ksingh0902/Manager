@@ -19,7 +19,7 @@ constructor(private data:DataService){}
 
 
 
-clientName:string='Select Client'
+client:string='Select Client'
 type:string='Rate Type'
 status:string ='Payment Status';
 
@@ -40,7 +40,7 @@ status:string ='Payment Status';
 
    OnSelectedClient(client:string){
          this.task.client =  client;
-          this.clientName=client;               
+          this.client=client;               
             }
 
             checkStatus(status:string){
@@ -58,10 +58,11 @@ status:string ='Payment Status';
         const formValues = form.value;
         formValues.client = this.task.client;
         this.data.addTask(this.task)
-        this.add.emit(this.task);  // Emit task for parent component
+          this.add.emit(this.task);  // Emit task for parent component
+        this.resetForm(); 
         form.resetForm()  // Reset form after submission
-        };
-      
+        
+      }      
 
 
         resetForm(){
@@ -76,7 +77,7 @@ status:string ='Payment Status';
             status:'',
             id:''
           };
-this.clientName='Select Client'
+this.client='Select Client'
 this.type='Rate Type'
 this.status='Payment Status'
         }

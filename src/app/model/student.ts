@@ -1,3 +1,4 @@
+
 export interface Student {
         title: string;
         description: string;
@@ -8,4 +9,5 @@ export interface Student {
         endDate: string;
         status: string;
         id:string;
+        timestamp?: number; //
 }
