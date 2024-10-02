@@ -48,29 +48,41 @@ export class TaskListComponent implements OnInit {
       });
     }
 
-  deleteStudent(item: Student) {
-    if (window.confirm(`Are you sure you want to delete "${item.title}"?`)) {
-      this.data.deleteStudent(item).then(() => {
-        // Optionally, you can provide a success message
-        // alert(`${item.title} has been deleted successfully.`);
-      }).catch((error) => {
-        // Handle any errors that may occur
-        console.error('Error deleting student:', error);
-        alert('There was an error deleting the student. Please try again.');
-      });
+    deleteStudent(item: Student, index: number): void {
+      if (window.confirm(`Are you sure you want to delete "${item.title}"?`)) {
+        this.data.deleteStudent(item).then(() => {
+          // If the deletion from the data source is successful, remove the item from the local list
+          this.list.splice(index, 0);
+        }).catch((error: any) => {
+          console.error('Error deleting student:', error);
+          alert('There was an error deleting the student. Please try again.');
+        });
+      }
     }
-  }
 
- editStudent(index: number, item: Student) {
-    this.editingIndex = index; // Set the index of the item being edited
-    this.tempItem = { ...item }; // Copy the current item to tempItem
-  }
+    editStudent(index: number, item: any): void {
+      this.editingIndex = index; // Set the editing index to the selected row
+      this.tempItem = { ...item }; // Create a copy of the item to edit
+    }
 
   saveStudent(index: number, item: Student) {
     this.data.updateStudent(this.tempItem as Student).then(() => {
-      this.list[index] = { ...item }; // Update the original list with edited values
-      this.editingIndex = null; // Clear the editing index
-    }).catch((error:any) => {
+      // Update the list immutably
+      this.list = this.list.map((student, i) => i === index ? { ...this.tempItem } : student);
+      this.editingIndex = null;
+      this.tempItem = { // Reset tempItem after saving
+        title: '',
+        description: '',
+        fromDate: '',
+        tillDate: '',
+        client: '',
+        type: '',
+        endDate: '',
+        status: '',
+        id: '',
+        timestamp: 0
+      };
+    }).catch((error: any) => {
       console.error('Error updating student:', error);
       alert('There was an error updating the student. Please try again.');
     });

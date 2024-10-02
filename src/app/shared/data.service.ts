@@ -30,6 +30,8 @@ export class DataService {
         )
     ) as Observable<Student[]>;
 }
+
+
   // Delete students
   deleteStudent(student: Student) {
     const studentDocRef = doc(this.firestore, `Students/${student.id}`); // Reference the document by its ID
@@ -47,8 +49,9 @@ export class DataService {
       type: student.type,
       endDate: student.endDate,
       status: student.status
-    }); // This returns a Promise
+    }
   
-      
+  ); // This returns a Promise
   }
+
 }
