@@ -23,9 +23,9 @@ h2:hover{
 
 
 .table-container {
+  width: 100%; /* Adjust width as needed */
   position: relative;
-  right: 10%;
-  width: 120%; /* Adjust width as needed */
+  right: 1%;
   overflow-y: auto; /* Enable vertical scrolling */
   max-height: 400px; /* Set a max height for the scrolling area */
   /* Adjust the max-height to fit your layout */

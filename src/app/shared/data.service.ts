@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData, addDoc, doc, deleteDoc, updateDoc } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, setDoc, getDoc, addDoc, doc, deleteDoc, updateDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Student } from '../model/student';
 import { map } from 'rxjs/operators'; // Use the correct import for operators
@@ -54,4 +54,23 @@ export class DataService {
   ); // This returns a Promise
   }
 
+    // Add or update a note
+    saveNote(note: string): Promise<void> {
+      const notesCollection = collection(this.firestore, 'Notes');
+      const noteDocRef = doc(notesCollection, 'sticky-note'); // Assuming one note per user
+      return setDoc(noteDocRef, { description: note, timestamp: Date.now() });
+    }
+  
+    getNote(): Promise<string> {
+      const noteDocRef = doc(this.firestore, 'Notes', 'sticky-note');
+      return getDoc(noteDocRef).then((docSnap) => {
+        // If the document exists, return the description; otherwise, return an empty string
+        if (docSnap.exists()) {
+          return docSnap.data()['description'] || '';
+        } else {
+          return ''; // Return empty string if no document exists
+        }
+      });
+    }
+  
 }

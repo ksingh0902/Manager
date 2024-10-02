@@ -1,9 +1,28 @@
 <app-navbar />
-<div class="container">
+
+<div class="hello">
 
     <app-task-create (add)="onAddTask($event)" class="left-section"></app-task-create> 
-    <!-- receieving data from child to parent with Output  from task create component-->
-     
+    <!-- receieving data from child to parent with Output  from task create component-->    
+
     <app-task-list [list]="tasks" class="right-section"> </app-task-list>
+   
+
     
+<div class="description">   
+    <div class="form-group">
+      <label for="description" class="notes">Additonal Notes</label>
+      <textarea 
+        id="description" 
+        class="form-control" 
+        name="description"
+        [(ngModel)]="noteDescription"
+        (input)="saveNote()"
+        rows="16">
+    </textarea> 
+    </div>
+
+
+
 </div>
+

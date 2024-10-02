@@ -52,8 +52,8 @@
               </button>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" (click)="checkStatus('Paid')" href="#">Paid</a></li>
-                <li><a class="dropdown-item" (click)="checkStatus('Confirmed')" href="#">Confirmed</a></li>
-                <li><a class="dropdown-item" (click)="checkStatus('Pending')" href="#">Pending</a></li>
+                <li><a class="dropdown-item" (click)="checkStatus('Release')" href="#">Release</a></li>
+                <li><a class="dropdown-item" (click)="checkStatus('Hold')" href="#">Hold</a></li>
               </ul>
             </div>
 
@@ -69,10 +69,11 @@
       </textarea> 
       </div>
     </div> 
+    
 
         <div class="form-group">
           <div class="start-check">
-          <label for="fromDate"> Payment From</label>
+          <label for="fromDate">  From</label>
           <input 
             type="date" 
             id="fromDate" 
@@ -83,7 +84,7 @@
       </div>
   
         <div class="form-group">
-          <label for="tillDate">Till Date</label>
+          <label for="tillDate">Till</label>
           <input 
             type="date" 
             id="tillDate" 
@@ -93,7 +94,7 @@
         </div>  
   <div class="form-group">
     <div class="last-end">
-      <label for="endDate">Contractor End Date</label>
+      <label for="endDate">Contract End Date</label>
       <input 
         type="date" 
         id="endDate" 

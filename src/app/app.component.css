@@ -1,0 +1,32 @@
+.hello{
+   overflow-x: hidden;
+    margin: 0%;
+}
+
+.description{
+    position: absolute;
+     left: 75%;
+    width: 22%;
+    top: 8%;
+    margin: 0;
+ 
+}
+
+.notes {
+    display: block; /* Center the text inside the textarea */
+    text-align: center;
+  }
+
+ .form-group label {
+   font-size: 20px;
+  font-weight: 700;
+   color: #d2deea; /* Darker gray for text */
+ }
+ /* Input and textarea styling */
+
+ /* Input focus effect */
+ .form-control:focus {
+   border-color: #7cb9fa;
+   outline: 0;
+   box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+ }
