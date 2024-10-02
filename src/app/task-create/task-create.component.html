@@ -56,6 +56,8 @@
                 <li><a class="dropdown-item" (click)="checkStatus('Pending')" href="#">Pending</a></li>
               </ul>
             </div>
+
+        <div class="description">   
       <div class="form-group">
         <label for="description">Comments</label>
         <textarea 
@@ -66,12 +68,42 @@
           rows="3">
       </textarea> 
       </div>
+    </div> 
 
-  <app-date 
-  (fromDateChanged)="onFromDateReceived($event)" 
-  (tillDateChanged)="onTillDateReceived($event)"
-  (endDate)="onEndDateRecieved($event)">
-</app-date>
+        <div class="form-group">
+          <div class="start-check">
+          <label for="fromDate"> Payment From</label>
+          <input 
+            type="date" 
+            id="fromDate" 
+          name="fromDate"
+            class="form-control"
+            [(ngModel)]="task.fromDate">
+        </div>
+      </div>
+  
+        <div class="form-group">
+          <label for="tillDate">Till Date</label>
+          <input 
+            type="date" 
+            id="tillDate" 
+            name="tillDate"
+            class="form-control"
+            [(ngModel)]="task.tillDate">
+        </div>  
+  <div class="form-group">
+    <div class="last-end">
+      <label for="endDate">Contractor End Date</label>
+      <input 
+        type="date" 
+        id="endDate" 
+        name="endDate"
+        class="form-control"
+        [(ngModel)]="task.endDate">
+    </div>
+  
+  </div>
+
 <button type="submit" class="btn btn-primary" [disabled]="taskForm.invalid">Add Task</button>
 
     </form>

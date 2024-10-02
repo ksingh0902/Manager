@@ -2,24 +2,15 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { TaskCreateComponent } from "./task-create/task-create.component";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, } from '@angular/forms';
 import { TaskListComponent } from "./task-create/task-list/task-list.component";
-import { BrowserModule } from '@angular/platform-browser';
-import { DateComponent } from './date/date.component';
 
-imports: [
-  BrowserModule,
-  FormsModule,
-  ReactiveFormsModule,
-  // AngularFireModule.initializeApp(firebaseConfig),  // Initialize Firebase here
-  // AngularFirestoreModule,  // Firestore module
-]
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, TaskCreateComponent, FormsModule, TaskListComponent, DateComponent],
+  imports: [RouterOutlet, NavbarComponent, TaskCreateComponent, FormsModule, TaskListComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

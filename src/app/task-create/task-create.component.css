@@ -1,43 +1,38 @@
 
 /* Container styling */
 
-/* .container{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100vh; 
-  width: 100%;
-} */
-
 .task-create-container {
-  background-color: #d6e4f1; /* Light gray background */
-  padding: 20px;
+  background-color: #c6e0f9; /* Light gray background */
+  padding: 5px;
+  margin-top: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 100%; /* Full width within its parent container */
 }
+
 /* Heading style */
 .task-create-container h3 {
   font-family: 'Arial', sans-serif;
   font-weight: 550;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
   text-align: center;
   color: #6599cd; /* Dark gray */
 }
 /* Form group styling */
 .form-group {
-  margin-bottom: 7px;
+   margin-left: 20px;
+   margin-bottom: 20px;
 }
 .form-group label {
-  display: block;
+  display:flex;
   font-weight: 500;
   color: #6599cd; /* Darker gray for text */
 }
 /* Input and textarea styling */
 .form-control {
-  width: 100%;
+  width: 45%;
   padding: 10px;
   border: 2px solid #ced4da; /* Light border */
   border-radius: 4px;
@@ -59,7 +54,7 @@
   font-weight: 600;
   padding: 10px 20px;
   font-size: 17px;
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -68,36 +63,43 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.description{
+  width: 98%;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  margin-left: 10px;
+}
+
+.last-end {
+  width: 98%;
+  position: absolute;
+  left:52%;
+  top: 55%;
+  
+}
+/* .start-check{
+  width: 50%;
+  position: absolute;
+  left:75%;
+  top: 75%;
+}  */
+
 .btn-primary{
   position: absolute;
-  left:65%;
-  top:83%;
+  left:85%;
+  top:75%;
 }
 .btn-primary:disabled {
   background-color: #93b7e5;
   border-color: #cfd2d6;
   cursor: not-allowed;
 }
-/* Error message styling */
-.error-message {
-  color: #e3342f;
-  font-size: 0.875rem;
-  margin-top: 5px;
-}
+
 .type{
-  margin-left:10px;
+  margin-left:30px;
 }
 .client{
-  margin-left:5px;
+  margin-left:24px;
 }
 
-
-@media (max-width: 768px) {
-  .task-create-container {
-      padding: 15px;
-  }
-
-  .btn-primary {
-      width: 100%; /* Full-width button on smaller screens */
-  }
-}
