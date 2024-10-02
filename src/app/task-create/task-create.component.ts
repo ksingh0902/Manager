@@ -59,8 +59,7 @@ status:string ='Payment Status';
         formValues.client = this.task.client;
         this.data.addTask(this.task)
           this.add.emit(this.task);  // Emit task for parent component
-        this.resetForm(); 
-        form.resetForm()  // Reset form after submission
+            form.resetForm()  // Reset form after submission
         
       }      
 
