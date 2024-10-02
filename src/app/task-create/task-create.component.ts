@@ -21,7 +21,7 @@ constructor(private data:DataService){}
 
 client:string='Select Client'
 type:string='Rate Type'
-status:string ='Payment Status';
+status:string ='Status';
 
 
   task:Student={
