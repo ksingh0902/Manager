@@ -10,7 +10,8 @@ h2{
     text-align: center;
       color: #e4e8eb; /* Light grey text on hover */
     text-shadow: 2px 1px 2px rgba(243, 239, 239, 0.741);
-        margin-bottom: 15px;
+        margin-top: 30px;
+       
 }
 
 h2:hover{
@@ -24,6 +25,7 @@ h2:hover{
   width: 100%; /* Adjust width as needed */
   position: relative;
   right: 1%;
+  bottom: 4rem;
   overflow-y: auto; /* Enable vertical scrolling */
   max-height: 400px; /* Set a max height for the scrolling area */
   /* Adjust the max-height to fit your layout */
@@ -71,6 +73,8 @@ h2:hover{
 
 .btn-group{
   position: relative;
+  padding: 0;
+  margin: 0;
   left: 85%;
-  top:4rem;
+  bottom: 3.2rem;
 }
