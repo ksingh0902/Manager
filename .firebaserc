@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "ksingh-taskmanager"
-  }
+    "production": "ksingh-taskmanager"
+  },
+  "targets": {},
+  "etags": {}
 }

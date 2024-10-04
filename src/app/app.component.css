@@ -4,11 +4,10 @@
 }
 
 .description{
-    position: absolute;
-     left: 75%;
-    width: 22%;
-    top: 14%;
-    margin: 0;
+  position: absolute;
+  left: 62%;
+  top: 14%;
+    width: 36%;
     border-radius: 8px;
     box-shadow: 2px 4px 4px 8px rgba(21, 21, 21, 0.945);
  

@@ -19,8 +19,8 @@ constructor(private data:DataService){}
 
 
 
-client:string='Select Client'
-type:string='Rate Type'
+client:string='Client'
+type:string='Type'
 status:string ='Status';
 
 

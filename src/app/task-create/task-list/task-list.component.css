@@ -27,7 +27,7 @@ h2:hover{
   right: 1%;
   bottom: 4rem;
   overflow-y: auto; /* Enable vertical scrolling */
-  max-height: 400px; /* Set a max height for the scrolling area */
+  max-height: 450px; /* Set a max height for the scrolling area */
   /* Adjust the max-height to fit your layout */
 }
 
@@ -75,6 +75,6 @@ h2:hover{
   position: relative;
   padding: 0;
   margin: 0;
-  left: 85%;
+  left: 88%;
   bottom: 3.2rem;
 }

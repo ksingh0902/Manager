@@ -8,22 +8,22 @@
   border-radius: 8px;
   box-shadow: 2px 2px 8px 5px rgba(0, 0, 0, 0.945);
   position: relative;
-  margin-left: 15px;
-  width: 72%; /* Full width within its parent container */
+  margin-left: 25px;
+  width: 58%; /* Full width within its parent container */
 }
 
 /* Heading style */
 .task-create-container h3 {
   font-family: 'Arial', sans-serif;
-  font-weight: 550;
+  font-weight: 750;
   margin-bottom: 10px;
   margin-top: 5px;
   text-align: center;
-  color: #bfc6cc; /* Dark gray */
+  color: #d2deea;; /* Dark gray */
 }
 /* Form group styling */
 .form-group {
-   margin-left: 20px;
+   margin-left: 35px;
    margin-bottom: 20px;
 }
 .form-group label {
@@ -33,7 +33,7 @@
 }
 /* Input and textarea styling */
 .form-control {
-  width: 48%;
+  width: 40%;
   padding: 10px;
   border: 2px solid #ced4da; /* Light border */
   border-radius: 4px;
@@ -64,18 +64,17 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.description{
-  width: 98%;
+.comments{
+  width: 102%;
   position: absolute;
-  left: 50%;
+  left: 50.5%;
   top: 13%;
-  margin-left: 10px;
 }
 
 .last-end {
   width: 98%;
   position: absolute;
-  left:52%;
+  left:55%;
   top: 53%;
   
 }
@@ -88,7 +87,7 @@
 
 .btn-primary{
   position: absolute;
-  left:85%;
+  left:80%;
   top:75%;
 }
 .btn-primary:disabled {
@@ -98,9 +97,9 @@
 }
 
 .type{
-  margin-left:10px;
+  margin-left:15px;
 }
 .client{
-  margin-left:15px;
+  margin-left:35px;
 }
 
