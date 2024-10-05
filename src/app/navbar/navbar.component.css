@@ -19,7 +19,20 @@ justify-content: center;
     cursor: pointer;
   }
 
-  .container img{
+
+  .container img {
     cursor: pointer;
-    background-color: #b7c5d5; /* Light grey text on hover */
-  }
+    margin-right: 0;
+    border: 4px solid rgb(176, 176, 176); /* You can specify the color or leave as is */
+    border-radius: 50%; /* Makes the image circular */
+    width: 55px; /* Adjust the size as needed */
+    height: 55px; /* Same as width to ensure a perfect circle */
+    object-fit: cover; /* Ensures the image scales nicely within the circle */
+    transition: transform 0.3s ease; /* For a smoother transition when moved */
+}
+
+.container img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover for a better look */
+    border-color: #5683af; /* Change border color on hover (optional) */
+}
+
