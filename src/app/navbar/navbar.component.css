@@ -15,7 +15,9 @@ justify-content: center;
   
   .todo-title:hover {
     color: #5683af; /* Light grey text on hover */
-    text-shadow: 2px 2px 4px rgba(243, 239, 239, 0.741); /* Subtle shadow for a professional look */
+    transform: scale(1.1); /* Slightly enlarge on hover for a better look */
+    transition: transform 0.5s ease; /* For a smoother transition when moved */
+    text-shadow: 1px 1px 2px rgba(243, 239, 239, 0.741); /* Subtle shadow for a professional look */
     cursor: pointer;
   }
 

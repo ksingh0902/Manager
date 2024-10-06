@@ -1,12 +1,14 @@
 .hello{
    overflow-x: hidden;
     margin: 0%;
+    position: relative;
 }
+
 
 .description{
   position: absolute;
   left: 62%;
-  top: 14%;
+  top: 1.5%;
     width: 36%;
     border-radius: 8px;
     box-shadow: 2px 4px 4px 8px rgba(21, 21, 21, 0.945);
@@ -23,6 +25,14 @@
   font-weight: 700;
    color: #d2deea; /* Darker gray for text */
  }
+
+ .form-group label:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover for a better look */
+  transition: transform 0.5s ease; /* For a smoother transition when moved */
+  color: #5683af; /* Light grey text on hover */
+  text-shadow: 1px 1px 2px rgba(243, 239, 239, 0.741); /* Subtle shadow for a professional look */
+}
+
  /* Input and textarea styling */
 
  /* Input focus effect */
@@ -31,3 +41,28 @@
    outline: 0;
    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
  }
+
+ .form-control {
+  height: calc(1.5em * 15); /* Each row is about 1.5em tall */
+  overflow-y: auto;         /* Add scroll if the content exceeds the height */
+  border: 1px solid #ccc;   /* Border to make it look like a textarea */
+  padding: 0.5em;           /* Some padding for better text positioning */
+  white-space: pre-wrap;    /* Allow wrapping of text like in a textarea */
+  word-wrap: break-word;    /* Ensure long words are wrapped */
+  font-family: inherit;     /* Keep the same font as the rest of the app */
+  font-size: inherit;       /* Inherit the font size */
+}
+
+.pointBullet{
+  width: 7%;
+  border: 3px solid rgb(176, 176, 176); /* You can specify the color or leave as is */
+  border-radius: 10%; /* Makes the image circular */
+  margin-left: 2px;
+  object-fit: cover; /* Ensures the image scales nicely within the circle */
+  transition: transform 0.3s ease; /* For a smoother transition when moved */
+}
+
+img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover for a better look */
+  border-color: #5683af; /* Change border color on hover (optional) */
+}

@@ -18,7 +18,7 @@ export class TaskListComponent implements OnInit {
 
   filteredList: Student[] = []; // Array to hold filtered tasks
   clients = ['TD Bank', 'BNS (A-G)', 'BNS (H-Z)', 'LBC Tech',]; // Client options for filtering
-  selectedClient: string | null = null; // For storing selected client
+  selectedClient: string ='Sort by client'; // For storing selected client
 
   // type:string='Rate Type'
 
@@ -71,9 +71,8 @@ export class TaskListComponent implements OnInit {
     }
     
     
-    selectClient(client: string | null) {
-      this.selectedClient = client; // Update selected client
-      
+    selectClient(client: string) {
+      this.selectedClient = client; // Update selected client   
       this.filterTasks(); // Filter tasks
     }  
   

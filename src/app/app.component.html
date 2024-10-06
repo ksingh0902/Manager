@@ -1,26 +1,26 @@
-<app-navbar />
+   <app-navbar />
 
-<div class="hello">
-
-    <app-task-create (add)="onAddTask($event)" class="left-section"></app-task-create> 
-    <!-- receieving data from child to parent with Output  from task create component-->    
-
-    <app-task-list [list]="tasks" class="right-section"> </app-task-list>
-   
-
-    <div class="new-task">
+    <div class="hello">
     
-<div class="description">   
-    <div class="form-group">
-      <label for="description" class="notes">Additional Notes</label>
-      <textarea 
-        id="description" 
-        class="form-control" 
-        name="description"
-        [(ngModel)]="noteDescription"
-        (input)="saveNote()"
-        rows="13">
-    </textarea> 
-    </div>
-</div>
-</div>
+        <app-task-create (add)="onAddTask($event)" class="left-section"></app-task-create> 
+        <!-- receieving data from child to parent with Output  from task create component-->    
+    
+        <app-task-list [list]="tasks" class="right-section"> </app-task-list>
+       
+      
+        <div class="new-task">
+          <div class="description">   
+            <div class="form-group">
+              <label for="description" class="notes">Additional Notes</label>
+
+                <!-- Button to insert an unordered list -->
+     <img class="pointBullet" (click)="insertBulletList()" src="data:image/png;base64,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" alt="">
+              <div 
+                id="description" 
+                class="form-control" 
+                contenteditable="true"
+                (keydown)="onKeydown($event)">
+              </div> 
+            </div>
+          </div>
+        </div>
